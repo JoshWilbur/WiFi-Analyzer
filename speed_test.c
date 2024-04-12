@@ -46,7 +46,7 @@ void test_download_speed() {
 int main(void) {
     while(1) {
         test_download_speed();
-        sleep(1); // Use Sleep(5 * 1000) on Windows
+        sleep(60); // Use Sleep(5 * 1000) on Windows
     }
     return 0;
 }
