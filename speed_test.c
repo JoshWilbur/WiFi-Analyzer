@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 // before first compile run: sudo apt-get install libcurl4-openssl-dev
-// to compile: gcc -o speed_test speed_test.c -lcurl
+// to compile: gcc -o speed speed_test.c -lcurl
 
 size_t write_data(void *ptr, size_t size, size_t nmemb, FILE *stream) {
     return fwrite(ptr, size, nmemb, stream);
@@ -36,7 +36,7 @@ void test_download_speed() {
             curl_easy_getinfo(curl, CURLINFO_CONTENT_LENGTH_DOWNLOAD_T, &fileSize);
             total_time = (double)(end - start) / CLOCKS_PER_SEC;
             speed = (fileSize / total_time) / (1024 * 1024); // Speed in Mbps
-            printf("Download speed: %.2f Mbps\n", speed);
+            printf("%.2f Mbps\n", speed);
         } else {
             fprintf(stderr, "Curl perform error: %s\n", curl_easy_strerror(res));
         }
@@ -47,9 +47,9 @@ void test_download_speed() {
 }
 
 int main(void) {
-    while(1) {
+    //while(1) {
         test_download_speed();
-        sleep(60); // Use Sleep(5 * 1000) on Windows
-    }
+        //sleep(600); // Only speed test every 10 minutes
+    //}
     return 0;
 }

@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c18
-SRCS = main.c signal_strength.c
-EXEC = wifi
+SRCS = signal_strength.c
+EXEC = strength
 
 all: $(EXEC)
 
