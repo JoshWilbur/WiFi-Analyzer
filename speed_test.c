@@ -3,6 +3,9 @@
 #include <time.h>
 #include <unistd.h>
 
+// before first compile run: sudo apt-get install libcurl4-openssl-dev
+// to compile: gcc -o speed_test speed_test.c -lcurl
+
 size_t write_data(void *ptr, size_t size, size_t nmemb, FILE *stream) {
     return fwrite(ptr, size, nmemb, stream);
 }
