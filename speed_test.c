@@ -3,8 +3,7 @@
 #include <time.h>
 #include <unistd.h>
 
-// before first compile run: sudo apt-get install libcurl4-openssl-dev
-// to compile: gcc -o speed speed_test.c -lcurl
+// Before first compile run: sudo apt-get install libcurl4-openssl-dev
 
 size_t write_data(void *ptr, size_t size, size_t nmemb, FILE *stream) {
     return fwrite(ptr, size, nmemb, stream);
@@ -14,7 +13,8 @@ void test_download_speed() {
     CURL *curl;
     FILE *fp;
     CURLcode res;
-    char *url = "https://ash-speed.hetzner.com/100MB.bin";
+    //char *url = "https://ash-speed.hetzner.com/100MB.bin";
+    char *url = "https://link.testfile.org/PDF10MB";
     char outfilename[FILENAME_MAX] = "/dev/null"; // Change this on Windows to "NUL"
     long fileSize;
     double total_time, speed;
