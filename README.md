@@ -15,7 +15,11 @@ A bash script will compile and execute the programs. Run using: bash ./measure.s
 
 # Benchmarking
 Distance | Device RSSI | iPhone RSSI | Device Speed | iPhone Speed
+
   <1 M	 |    -9 dBm   |    -8 dBm   |   2.57 Mbps  |  3.31 Mbps
+  
   5 M    |   -54 dBm   |   -51 dBm   |   2.56 Mbps  |  2.60 Mbps
+  
   10 M   |   -58 dBm   |   -57 dBm   |   2.40 Mbps  |  2.71 Mbps
+  
   50 M   |   -72 dBm   |   -68 dBm   |   2.31 Mbps  |  2.17 Mbps
